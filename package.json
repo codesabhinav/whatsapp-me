@@ -1,0 +1,21 @@
+{
+  "name": "my-whatsapp-api",
+  "version": "1.0.0",
+  "description": "Simple Node.js API to register a WhatsApp Web session via QR scan and send messages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.0",
+    "puppeteer": "^24.11.2",
+    "qrcode": "^1.5.3",
+    "whatsapp-web.js": "^1.31.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
