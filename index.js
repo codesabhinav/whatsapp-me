@@ -98,8 +98,8 @@ app.get("/register/:userId", async (req, res) => {
         authStrategy: new LocalAuth({ clientId: userId }),
         puppeteer: {
           headless: true,
-          executablePath:
-            "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          // executablePath:
+          //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
           args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
