@@ -11,9 +11,18 @@ const client = new Client({
   authStrategy: new LocalAuth({ clientId: userId }),
   puppeteer: {
     headless: true,
-    executablePath:
-      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    // executablePath:
+    //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+     args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--single-process",
+      "--disable-gpu"
+    ]
   },
 });
 
@@ -53,8 +62,8 @@ app.get("/register/:userId", async (req, res) => {
       authStrategy: new LocalAuth({ clientId: userId }),
       puppeteer: {
         headless: true,
-        executablePath:
-          "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        // executablePath:
+        //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
       },
     });
@@ -91,7 +100,16 @@ app.get("/register/:userId", async (req, res) => {
           headless: true,
           executablePath:
             "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+          args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--single-process",
+      "--disable-gpu"
+    ]
         },
       });
 
